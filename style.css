@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.content {
+    font-family: Arial, sans-serif;
+    background: url("world-map.jpg") no-repeat top;
+    background-size: 100%;
+}
+.header {
+    color: blue;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.grid {
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 200px) ;
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 15px;
+}
+.front {
+    display: grid;
+    grid-template-columns: repeat(1, 200px) ;
+    grid-template-rows: repeat(1, 200px);
+    background: rgb(91,209,215);
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    color: red;
+    border-style: double;
+    border-width: 4px;
+    border-color: red;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.back {
+    display: grid;
+    grid-template-columns: repeat(1, 200px) ;
+    grid-template-rows: repeat(1, 200px);
+    background: rgb(91,209,215);
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    color: red;
+    border-style: double;
+    border-width: 4px;
+    border-color: red;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+.text {
+    align-items: center;
+}
+.card {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    font-family: "Roboto", sans-serif ;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
